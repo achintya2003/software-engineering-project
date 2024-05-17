@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Fuel Delivery</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Online Fuel Delivery</h1>
+    <form action="/place_order" method="POST">
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="fuel_quantity">Fuel Quantity (Liters):</label>
+        <input type="number" id="fuel_quantity" name="fuel_quantity" required><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
